@@ -1,0 +1,140 @@
+body {
+    background-color: honeydew;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: whitesmoke;
+    margin: 5% auto 15% auto;
+    border: 1px solid darkslategray;
+    width: 30%;
+}
+
+form {
+    position: relative;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Full-width input fields */
+input[name=rownum], input[name=colnum] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid darkslategray;
+    box-sizing: border-box;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* The mosaic container and the tiles */
+.mosaic {
+    display: inline-block;
+    position: relative;
+    box-shadow: inset 3px 3px 3px darkslategray;
+    background-color: white;
+    border: thin solid thistle;
+}
+
+.tile {
+    display: inline-block;
+    color: darkslategray;
+    background-color: whitesmoke;
+    border: thin solid thistle;
+    box-shadow: 3px 3px 3px darkslategray;
+    text-align: center;
+    font-size: 23vmin;
+    cursor: pointer;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.tile:hover {
+    color: whitesmoke;
+    background-color: lightslategray;
+    border-color: lightslategray;
+}
+
+/* The control bar */
+.controlbar {
+    display: inline-block;
+    position: absolute;
+}
+
+.controlbutton {
+    display: inline-block;
+    height: fit-content;
+    width: 80px;
+    border-radius: .25rem;
+    font-weight: 200;
+    color: darkslategray;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    border: 1px solid slategray;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.controlbutton:hover {
+    color: whitesmoke;
+    background-color: lightslategray;
+    border-color: lightslategray;
+    box-shadow: 3px 3px 3px darkslategray;
+}
+
+p {
+    display: inline-block;
+    margin: 0%;
+    font-size: 1rem;
+    color: darkslategray;
+    font-weight: 200;
+    text-align: justify;
+}

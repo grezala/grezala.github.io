@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <title>Document</title>
+</head>
+
+<body onresize="optimizeLayout()">
+    <div class="controlbar">
+        <button class="controlbutton" onclick="document.getElementById('settings').style.display='block'">New
+            game</button>
+        <button class="controlbutton" onclick="reset()">Try again</button>
+        <p>Click the numbered tiles to move them to the neighboring empty field and try to set them up in the correct order! :)</p>
+    </div>
+    <div id="settings" class="modal">
+        <form class="modal-content animate">
+            <span onclick="document.getElementById('settings').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <div class="container">
+                <label for="rownum"><b>Number of rows</b></label>
+                <input type="number" value="3" name="rownum" required>
+                <small>The table should contain at least 3 rows</small><br>
+                <label for="colnum"><b>Number of columns</b></label>
+                <input type="number" value="3" name="colnum" required>
+                <small>The table should contain at least 3 columns</small><br>
+                <button type="button" onclick="createMosaic()">Generate</button>
+                <button type="button" onclick="document.getElementById('settings').style.display='none'">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="mosaic container"></div>
+
+    <script src="./game.js"></script>
+
+</body>
+
+</html>

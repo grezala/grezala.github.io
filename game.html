@@ -10,9 +10,9 @@
 
 <body onresize="optimizeLayout()">
     <div class="controlbar">
-        <button class="controlbutton" onclick="document.getElementById('settings').style.display='block'">New
+        <button class="button controlbutton" onclick="document.getElementById('settings').style.display='block'">New
             game</button>
-        <button class="controlbutton" onclick="reset()">Try again</button>
+        <button class="button controlbutton" onclick="reset()">Try again</button>
         <p>Click the numbered tiles to move them to the neighboring empty field and try to set them up in the correct order! :)</p>
     </div>
     <div id="settings" class="modal">
@@ -26,12 +26,12 @@
                 <label for="colnum"><b>Number of columns</b></label>
                 <input type="number" value="3" name="colnum" required>
                 <small>The table should contain at least 3 columns</small><br>
-                <button type="button" onclick="createMosaic()">Generate</button>
-                <button type="button" onclick="document.getElementById('settings').style.display='none'">Cancel</button>
+                <button class="button modalbutton" name="generatebtn" onclick="createMosaic()">Generate</button>
+                <button class="button modalbutton" name="cancelbtn" onclick="document.getElementById('settings').style.display='none'">Cancel</button>
             </div>
         </form>
     </div>
-    <div class="mosaic container"></div>
+    <div class="mosaic"></div>
 
     <script src="./game.js"></script>
 

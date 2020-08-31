@@ -22,7 +22,7 @@ function optimizeLayout() {
     }
 };
 
-optimizeLayout()
+optimizeLayout();
 
 /* Define and collect parameters */
 let values = [];
